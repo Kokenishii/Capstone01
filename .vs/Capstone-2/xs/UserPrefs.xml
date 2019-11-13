@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{1A1F2A53-05A3-482B-1933-6100B7C634AF}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerControl.cs">
+    <Files>
+      <File FileName="Assets/PlayerControl.cs" Line="69" Column="59" />
+      <File FileName="Assets/PushingBox.cs" />
+      <File FileName="Assets/CameraControll.cs" />
+      <File FileName="Assets/CameraPointControll.cs" />
+      <File FileName="Assets/GrenadeControll.cs" />
+      <File FileName="Assets/CannonBall.cs" />
+      <File FileName="Assets/rotatePlatform.cs" />
+      <File FileName="Assets/ragDollControl.cs" Line="18" Column="8" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e691c7ad-7068-4cf6-9217-348822c7773b" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
