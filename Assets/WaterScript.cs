@@ -27,7 +27,7 @@ public class WaterScript : MonoBehaviour
     {
        if(other.tag=="Player")
         {
-            other.gameObject.GetComponent<Rigidbody>().AddForce(waterForce * other.transform.forward, ForceMode.Impulse);
+            other.gameObject.GetComponent<Rigidbody>().AddForce(waterForce * other.transform.right*-1, ForceMode.Impulse);
             steppedOn = true;
             stepper = other.gameObject;
             print(stepper);

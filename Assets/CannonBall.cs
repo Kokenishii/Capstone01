@@ -22,7 +22,7 @@ public class CannonBall : MonoBehaviour
         if (inControll&&!onCD)
         {
             GameObject newCannon = Instantiate(grenade, transform.position+new Vector3(0,1,0), Quaternion.identity);
-            newCannon.GetComponent<Rigidbody>().AddForce(transform.forward * 5f + transform.up * 2f, ForceMode.Impulse);
+            newCannon.GetComponent<Rigidbody>().AddForce(transform.forward * 10f , ForceMode.VelocityChange);
             onCD = true;
             StartCoroutine(CDcounter());
         }
@@ -46,7 +46,7 @@ public class CannonBall : MonoBehaviour
         {
             user = other.transform;
      
-            transform.LookAt(2 * transform.position - user.position);
+            //transform.LookAt(2 * transform.position - user.position);
 
             inControll = true;
              

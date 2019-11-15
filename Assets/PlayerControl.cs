@@ -57,8 +57,8 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetButtonDown("Banana" + pNumber)&& bananaNum>=1)
         {
-            GameObject newBanana = Instantiate(banana, transform.position-1f*transform.forward+new Vector3(0,2f,0), banana.transform.rotation);
-            newBanana.GetComponent<Rigidbody>().AddForce(-transform.forward * 4f + transform.up * 2f, ForceMode.Impulse);
+            GameObject newBanana = Instantiate(banana, transform.position+new Vector3(0,2f,2f), banana.transform.rotation);
+            newBanana.GetComponent<Rigidbody>().AddForce(transform.up * 4f, ForceMode.Impulse);
             StartCoroutine(MakeBanana());
             bananaNum -= 1;
         }

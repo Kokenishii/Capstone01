@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c005e7e1a0de4f329d297bc04a890d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterForce: 10
+  waterForce: 600
 --- !u!54 &3845956275541356582
 Rigidbody:
   m_ObjectHideFlags: 0
