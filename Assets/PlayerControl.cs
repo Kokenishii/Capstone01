@@ -10,8 +10,9 @@ public class PlayerControl : MonoBehaviour
     public float maxSpeed = 10;
     public float dashForce = 5;
     public string pNumber = "1";
+    public int chasemode = 0;
     bool canDash = true;
-    bool contact = false;
+    public bool contact = false;
     public float pushForce = 20f;
    public float dashCD = 2f;
     public GameObject banana;
@@ -96,25 +97,44 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEntry(Collision collision)
     {
         if(collision.gameObject.tag=="Player")
         {
-
+           
             contact = true;
-            if (Input.GetButtonDown("Fire" + pNumber)&&canDash)
-            {
-                print("push");
-                collision.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * pushForce, ForceMode.Impulse);
-                canDash = false;
-                myAnimator.SetBool("isDashing", true);
-                StartCoroutine(DashCD());
-            }
+
+
+            //if (Input.GetButtonDown("Fire" + pNumber)&&canDash)
+            //{
+            //    print("push");
+            //    collision.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * pushForce, ForceMode.Impulse);
+            //    canDash = false;
+            //    myAnimator.SetBool("isDashing", true);
+            //    StartCoroutine(DashCD());
+            //}
         }
-        else
+        
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
+
             contact = false;
+
+
+            //if (Input.GetButtonDown("Fire" + pNumber)&&canDash)
+            //{
+            //    print("push");
+            //    collision.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * pushForce, ForceMode.Impulse);
+            //    canDash = false;
+            //    myAnimator.SetBool("isDashing", true);
+            //    StartCoroutine(DashCD());
+            //}
         }
+
     }
 
 

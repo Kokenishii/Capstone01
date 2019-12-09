@@ -19,14 +19,13 @@ public class KneeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-            
-        //bool myPlayerWalking = GameObject.Find("Player" + pNumber).GetComponent<ragDollControl>().isWalking;
-        //if (myPlayerWalking)
-        //{
+
+
+        bool myPlayerWalking = Mathf.Abs(Input.GetAxis("Horizontal" + pNumber)) > 0 || Mathf.Abs(Input.GetAxis("Vertical" + pNumber)) > 0;
+        if (myPlayerWalking)
+        {
             Vector3 vel = new Vector3(0, speed * Mathf.Sin(Time.time * 20 + offset), 0);
             rb.velocity += vel * speed;
-            //print("myPlayerWalking?" + "pnumber" + " " + myPlayerWalking);
-        //}
     }
+}
 }
