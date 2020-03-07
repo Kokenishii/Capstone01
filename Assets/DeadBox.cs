@@ -9,15 +9,23 @@ public class DeadBox : MonoBehaviour
 {
     public Text mytext1;
     public Text mytext2;
-     public GameObject player1;
+     public GameObject player1no;
+    public GameObject player2no;
+    public GameObject player1;
     public GameObject player2;
     GameObject p1n;
     GameObject p2n;
-    int score1 = 0;
-    int score2 = 0;
+    public int score1 = 0;
+    public int score2 = 0;
+    Vector3 p1origin;
+    Vector3 p2origin;
+
+   
     // Start is called before the first frame update
     void Start()
     {
+        p1origin = player1.transform.position;
+        p2origin = player2.transform.position;
         //score2 = 0;
         mytext1 = GameObject.Find("Text1").GetComponent<Text>();
         mytext2 = GameObject.Find("Text2").GetComponent<Text>();
@@ -40,28 +48,28 @@ public class DeadBox : MonoBehaviour
         mytext2.text = score2.ToString();
         p1n = GameObject.Find("Player1");
         p2n = GameObject.Find("Player2");
-        if (p1n.GetComponent<ragDollControl>().contact == true)
-        {
-            p1n.GetComponent<ragDollControl>().contact = false; 
+        //if (p1n.GetComponent<ragDollControl>().contact == true)
+        //{
+        //    p1n.GetComponent<ragDollControl>().contact = false; 
             
-            score1 += 1;
-            GameObject p2 = GameObject.Find("Player2no");
-            GameObject.Destroy(p2);
-            GameObject newp2 = Instantiate(player2, new Vector3(0, 5, -20), Quaternion.identity);
-            newp2.name = "Player2no";
+        //    score1 += 1;
+        //    GameObject p2 = GameObject.Find("Player2no");
+        //    GameObject.Destroy(p2);
+        //    GameObject newp2 = Instantiate(player2, new Vector3(0, 5, -20), Quaternion.identity);
+        //    newp2.name = "Player2no";
 
 
-        }
+        //}
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            PlayerPrefs.SetInt("Score1", 0);
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    PlayerPrefs.SetInt("Score1", 0);
         
 
     
         
-            PlayerPrefs.SetInt("Score2", 0);
-        }
+        //    PlayerPrefs.SetInt("Score2", 0);
+        //}
     }
     private void OnTriggerEnter(Collider collision) 
     {
@@ -75,7 +83,7 @@ public class DeadBox : MonoBehaviour
                 GameObject p1= GameObject.Find("Player1no");
                 //GameObject.Destroy(hit.transform.parent.gameObject);
                 GameObject.Destroy(p1);
-                GameObject newp1 = Instantiate(player1, new Vector3(0, 2, -15), Quaternion.identity);
+                GameObject newp1 = Instantiate(player1no, p1origin, Quaternion.identity);
                 newp1.name = "Player1no";
                 //GameObject.Find("Player1no").transform.position = GameObject.Find("Player2no").transform.position + new Vector3(0, 4f, 0);
             }
@@ -85,7 +93,7 @@ public class DeadBox : MonoBehaviour
                 //hit.gameObject.GetComponentInParent<Transform>().position = new Vector3(0, 5, -20);
                 GameObject p2= GameObject.Find("Player2no");
                 GameObject.Destroy(p2);
-                GameObject newp2 = Instantiate(player2, new Vector3(0, 2, -25), Quaternion.identity);
+                GameObject newp2 = Instantiate(player2no, p2origin, Quaternion.identity);
                 newp2.name = "Player2no";
                 //GameObject.Find("Player2no").transform.position = GameObject.Find("Player1no").transform.position + new Vector3(0, 4f, 0);
             }

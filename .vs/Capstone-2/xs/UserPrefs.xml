@@ -1,25 +1,17 @@
 ﻿<Properties StartupConfiguration="{1A1F2A53-05A3-482B-1933-6100B7C634AF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/characterLookat.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CoinControll.cs">
     <Files>
-      <File FileName="Assets/CoinControll.cs" Line="11" Column="3" />
+      <File FileName="Assets/Controll_Shoot.cs" Line="82" Column="122" />
+      <File FileName="Assets/ParentPlayer.cs" />
+      <File FileName="Assets/BulletControl.cs" Line="39" Column="27" />
       <File FileName="Assets/DeadBox.cs" />
-      <File FileName="Assets/PushingBox.cs" />
-      <File FileName="Assets/CameraControll.cs" />
-      <File FileName="Assets/CameraPointControll.cs" />
-      <File FileName="Assets/GrenadeControll.cs" />
-      <File FileName="Assets/KneeScript.cs" />
-      <File FileName="Assets/CannonBall.cs" />
-      <File FileName="Assets/WaterScript.cs" />
-      <File FileName="Assets/SwingControl.cs" />
-      <File FileName="Assets/rotatePlatform.cs" />
-      <File FileName="Assets/ButtonControl.cs" />
-      <File FileName="Assets/Shader/CelShading1.shader" Line="1" Column="1" />
-      <File FileName="Assets/characterLookat.cs" Line="16" Column="114" />
+      <File FileName="Assets/RotatingPlane.cs" />
+      <File FileName="Assets/CoinControll.cs" Line="17" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7233d2b3-8bed-4fda-888c-e677bf3e7cea" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2b41c31e-93c4-4a7b-9ce7-9dbdcffaf03c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

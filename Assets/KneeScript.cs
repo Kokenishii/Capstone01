@@ -6,7 +6,7 @@ public class KneeScript : MonoBehaviour
 {
     public string pNumber = "1";
     Rigidbody rb;
-    public float speed = 50;
+    public float speed = 20;
     public float offset = 0;
 
     // Start is called before the first frame update

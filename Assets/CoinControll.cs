@@ -42,14 +42,14 @@ public class CoinControll : MonoBehaviour
             GameObject hit = collision.gameObject;
             if (hit.GetComponent<ragDollControl>().pNumber == "1")
             {
-                score1 += 1;
+                //score1 += 1;
             }
             if (hit.GetComponent<ragDollControl>().pNumber == "2")
             {
-                score2 += 1;
+                //score2 += 1;
             }
 
-            GameObject.Destroy(this.gameObject);
+            //GameObject.Destroy(this.gameObject);
 
         }
     }
