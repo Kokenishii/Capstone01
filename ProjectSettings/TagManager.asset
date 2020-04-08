@@ -8,6 +8,8 @@ TagManager:
   - Stuff
   - Body
   - Body1
+  - Bullet
+  - Body2
   layers:
   - Default
   - TransparentFX

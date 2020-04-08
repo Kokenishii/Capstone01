@@ -9,14 +9,18 @@ public class DeadBox : MonoBehaviour
 {
     public Text mytext1;
     public Text mytext2;
-     public GameObject player1no;
+    public Text mytext3;
+    public GameObject player1no;
     public GameObject player2no;
     public GameObject player1;
     public GameObject player2;
     GameObject p1n;
     GameObject p2n;
-    public int score1 = 0;
-    public int score2 = 0;
+    public int hp1 = 100;
+    public int hp2 = 100;
+    GameObject hp1bar;
+    GameObject hp2bar;
+    float hpbarmax;
     Vector3 p1origin;
     Vector3 p2origin;
 
@@ -26,32 +30,39 @@ public class DeadBox : MonoBehaviour
     {
         p1origin = player1.transform.position;
         p2origin = player2.transform.position;
-        //score2 = 0;
-        mytext1 = GameObject.Find("Text1").GetComponent<Text>();
-        mytext2 = GameObject.Find("Text2").GetComponent<Text>();
-        if (!PlayerPrefs.HasKey("Score1"))
-        {
-            PlayerPrefs.SetInt("Score1", 0);
-        }
+        hp1bar = GameObject.Find("HP1");
+        hp2bar = GameObject.Find("HP2");
+        hpbarmax = hp1bar.GetComponent<RectTransform>().transform.localScale.x;
 
-        if (!PlayerPrefs.HasKey("Score2"))
-        {
-            PlayerPrefs.SetInt("Score2", 0);
-        }
+
+        //score2 = 0;
+        //mytext1 = GameObject.Find("Text1").GetComponent<Text>();
+        //mytext2 = GameObject.Find("Text2").GetComponent<Text>();
+        //if (!PlayerPrefs.HasKey("Score1"))
+        //{
+        //    PlayerPrefs.SetInt("Score1", 0);
+        //}
+
+        //if (!PlayerPrefs.HasKey("Score2"))
+        //{
+        //    PlayerPrefs.SetInt("Score2", 0);
+        //}
     }
 
     // Update is called once per frame
     void Update()
 
     {
-        mytext1.text = score1.ToString();
-        mytext2.text = score2.ToString();
+        mytext1.text = hp1.ToString();
+        mytext2.text = hp2.ToString();
         p1n = GameObject.Find("Player1");
         p2n = GameObject.Find("Player2");
+        hp1bar.GetComponent<RectTransform>().transform.localScale = new Vector3(hpbarmax * hp1 / 100,1, 1);
+        hp2bar.GetComponent<RectTransform>().transform.localScale = new Vector3(hpbarmax * hp2 / 100,1, 1);
         //if (p1n.GetComponent<ragDollControl>().contact == true)
         //{
         //    p1n.GetComponent<ragDollControl>().contact = false; 
-            
+
         //    score1 += 1;
         //    GameObject p2 = GameObject.Find("Player2no");
         //    GameObject.Destroy(p2);
@@ -64,12 +75,22 @@ public class DeadBox : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.P))
         //{
         //    PlayerPrefs.SetInt("Score1", 0);
-        
 
-    
-        
+
+
+
         //    PlayerPrefs.SetInt("Score2", 0);
         //}
+
+        if (hp1 <= 0 && hp2>0)
+        {
+            mytext3.text = "Player 2 Wins";
+        }
+
+        if (hp2 <= 0&&hp1>0)
+        {
+            mytext3.text = "Player 1 Wins";
+        }
     }
     private void OnTriggerEnter(Collider collision) 
     {

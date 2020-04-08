@@ -7,7 +7,7 @@ using UnityEngine;
 public class Controll_Shoot : MonoBehaviour
 {
   
-    public GameObject banana;
+    public GameObject sword;
     public GameObject grenade;
     public int bananaNum;
     public int grenadeNum = 1;
@@ -23,7 +23,7 @@ public class Controll_Shoot : MonoBehaviour
     public bool contact = false;
     public GameObject bullet;
     bool canShoot = true;
-    public float shootCD = 02f;
+    public float shootCD = 1f;
     float shootCount = 0.1f;
     
 
@@ -32,7 +32,7 @@ public class Controll_Shoot : MonoBehaviour
 void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
-
+        sword = GameObject.Find("sword" + pNumber);
     }
 
     // Update is called once per frame
@@ -60,22 +60,21 @@ void Start()
         {
             isWalking = false;
         }
-
-        if (Input.GetButtonDown("Banana" + pNumber) && bananaNum >= 1)
+        if (Input.GetButtonDown("Hit"+pNumber))
         {
-            GameObject newBanana = Instantiate(banana, transform.position + 2f * transform.forward , banana.transform.rotation);
-            newBanana.GetComponent<Rigidbody>().AddForce(transform.forward * 2f, ForceMode.Impulse);
-            StartCoroutine(MakeBanana());
-            bananaNum -= 1;
-        }
-        print("myvel"+" "+myVel);
-        if (Input.GetButtonDown("Fire" + pNumber)&&isGrounded)
-        {
-           print("jumped");
-           rb.AddForce(new Vector3(0, 0.6f, 0) * jumpForce,ForceMode.Impulse);
 
+            // print("Sword" + pNumber);
+            sword.SetActive(true);
         }
-        print(isGrounded);
+        
+//        print("myvel"+" "+myVel);
+        //if (Input.GetButtonDown("Fire" + pNumber)&&isGrounded)
+        //{
+        ////   print("jumped");
+        //   rb.AddForce(new Vector3(0, 0.6f, 0) * jumpForce,ForceMode.Impulse);
+
+        //}
+//        print(isGrounded);
         //shooting
         if (Input.GetAxis("Fire" + pNumber) >= 0.5f&&canShoot)
         {
@@ -95,12 +94,7 @@ void Start()
        
     }
 
-    IEnumerator MakeBanana()
-    {
-        yield return new WaitForSeconds(5f);
-        bananaNum += 1;
-    }
-
+   
 
     private void OnTriggerEnter2(Collider collision)
     {

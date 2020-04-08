@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 214419b691c6e4b8f8f7e282497d07dc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: dfd79341a93644a88bc4f9050764b939, type: 3}
         m_Scale: {x: 20, y: 20}
         m_Offset: {x: 1.04, y: 0}
     - _TextureSample1:
@@ -74,7 +74,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _CutoffPoint: 0.97
+    - _CutoffPoint: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -83,10 +83,10 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineWidth: 0.005
+    - _OutlineWidth: 0
     - _OutlineWidth1: 0.005
     - _Parallax: 0.02
-    - _Shininess: 0.84
+    - _Shininess: 0.01
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -95,9 +95,9 @@ Material:
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0, g: 0.8432112, b: 1, a: 0}
+    - _Color0: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 0.30030343, g: 0, b: 0.41509432, a: 0}
+    - _Highlight: {r: 0.0763617, g: 0.15648942, b: 0.49056602, a: 0}
     - _MainColor: {r: 0.5283019, g: 0.08223568, b: 0.08223568, a: 1}
-    - _Shade: {r: 0.6498687, g: 0.06594872, b: 0.735849, a: 0}
+    - _Shade: {r: 0.29690284, g: 0.4528302, b: 0.4528302, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

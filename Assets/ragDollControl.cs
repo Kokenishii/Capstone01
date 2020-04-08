@@ -60,14 +60,16 @@ void Start()
             StartCoroutine(MakeBanana());
             bananaNum -= 1;
         }
-        print("myvel"+" "+myVel);
+        //print("myvel"+" "+myVel);
+
+
         if (Input.GetButtonDown("Fire" + pNumber)&&isGrounded)
         {
-           print("jumped");
+         
            rb.AddForce(new Vector3(0, 0.6f, 0) * jumpForce,ForceMode.Impulse);
 
         }
-        print(isGrounded);
+        //print(isGrounded);
        
 
        

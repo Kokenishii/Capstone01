@@ -11,6 +11,8 @@ public class BulletControl : MonoBehaviour
     public float bloodDistance = 0.2f;
     public int bloodCount = 15;
     public float bloodForce = 10f;
+
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -30,21 +32,22 @@ public class BulletControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Body")
-        {
-
-            GameObject dead = GameObject.Find("Deadbox");
-            dead.GetComponent<DeadBox>().score2 += 1;
-            GameObject.Destroy(this.gameObject);
-            print("hit2");
-        }
         if (collision.gameObject.tag == "Body1")
         {
 
             GameObject dead = GameObject.Find("Deadbox");
-            dead.GetComponent<DeadBox>().score1 += 1;
+            dead.GetComponent<DeadBox>().hp1 -= 5;
             GameObject.Destroy(this.gameObject);
-            print("hit1");
+            //print("hit1");
+        }
+        
+        if (collision.gameObject.tag == "Body2")
+        {
+
+            GameObject dead = GameObject.Find("Deadbox");
+            dead.GetComponent<DeadBox>().hp2 -= 5;
+            GameObject.Destroy(this.gameObject);
+           // print("hit2");
         }
     }
 
