@@ -60,9 +60,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 120ede8c4897abf488ebbcd0d0b46ede, type: 3}
         m_Scale: {x: 20, y: 20}
-        m_Offset: {x: 1.04, y: 0}
+        m_Offset: {x: 1.64, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -83,7 +83,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineWidth: 0
+    - _OutlineWidth: 0.003
     - _OutlineWidth1: 0.005
     - _Parallax: 0.02
     - _Shininess: 0.01
@@ -95,9 +95,9 @@ Material:
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0, g: 0, b: 0, a: 0}
+    - _Color0: {r: 1, g: 0, b: 0.6039734, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 0, g: 0.14408235, b: 0.16981131, a: 1}
+    - _Highlight: {r: 0.24319157, g: 0.08566214, b: 0.5188679, a: 1}
     - _MainColor: {r: 0.5283019, g: 0.08223568, b: 0.08223568, a: 1}
-    - _Shade: {r: 0.14150944, g: 0.4537603, b: 0.5660378, a: 0}
+    - _Shade: {r: 0.37851733, g: 0.13955145, b: 0.6037736, a: 0}
     - _SpecularColor: {r: 0, g: 0, b: 0, a: 1}

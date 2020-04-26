@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{1A1F2A53-05A3-482B-1933-6100B7C634AF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Controll_Shoot.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/JumpPlate.cs">
     <Files>
-      <File FileName="Assets/swordHit.cs" Line="31" Column="54" />
+      <File FileName="Assets/swordHit.cs" Line="42" Column="119" />
       <File FileName="Assets/BulletControl.cs" />
-      <File FileName="Assets/Controll_Shoot.cs" Line="92" Column="10" />
+      <File FileName="Assets/Controll_Shoot.cs" Line="27" Column="29" />
       <File FileName="Assets/swordControl.cs" />
       <File FileName="Assets/ragDollControl.cs" />
       <File FileName="Assets/ParentPlayer.cs" />
@@ -14,11 +14,12 @@
       <File FileName="Assets/Explosive.cs" />
       <File FileName="Assets/Booster.cs" />
       <File FileName="../../../../../../Applications/Unity/Hub/Editor/2019.3.2f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs" />
+      <File FileName="Assets/JumpPlate.cs" Line="25" Column="82" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6055269a-e512-42db-8709-7ae4658712ba" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8f11203d-398d-40c6-99cb-7be69495e3ee" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
