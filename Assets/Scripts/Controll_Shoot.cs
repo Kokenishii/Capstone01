@@ -19,12 +19,15 @@ public class Controll_Shoot : MonoBehaviour
     public bool isWalking = false;
     public float maxSpeed = 8f;
 
-    bool isGrounded = true;
+    public bool isGrounded = true;
     public bool contact = false;
     public GameObject bullet;
-    bool canShoot = true;
+    public bool canShoot = true;
     public float shootCD = 1f;
     float shootCount = 0.1f;
+    public GameObject particle1;
+    public GameObject particle2;
+    public bool isReady = true;
     
 
 
@@ -38,7 +41,11 @@ void Start()
     // Update is called once per frame
     void Update()
     {
-       float hor = Input.GetAxis("Horizontal" + pNumber)*Time.deltaTime;
+        GetComponentInParent<PuppetParent>().pNumber = pNumber;
+        GetComponentInParent<PuppetParent>().isReady = isReady;
+
+
+        float hor = Input.GetAxis("Horizontal" + pNumber)*Time.deltaTime;
         float ver = Input.GetAxis("Vertical" + pNumber) * Time.deltaTime;
         Vector3 myVel = new Vector3(hor, 0f, ver);
 
@@ -46,15 +53,27 @@ void Start()
         {
             rb.velocity += myVel * speed;
         }
-        Transform parentTransform = transform.parent.parent.transform;
-        Vector3 lookAt = new Vector3(parentTransform.position.x + hor, parentTransform.position.y, parentTransform.position.z + ver);
-        parentTransform.LookAt(lookAt);
+         
+
+
+
 
         if (myVel.magnitude > 0.01)
         {
-            isWalking = true;
+            //isWalking = true;
+            //Transform parentTransform = transform.parent.transform;
+            
+            //if (isGrounded)
+            //{
+            //    Vector3 lookAt = parentTransform.position + myVel;
+               
 
+            //    Quaternion rotTarget = Quaternion.LookRotation(myVel);
+            //    parentTransform.rotation = Quaternion.RotateTowards(parentTransform.rotation, rotTarget, 1000f * Time.deltaTime);
+            //}
            
+
+
         }
         else
         {
@@ -66,6 +85,7 @@ void Start()
             // print("Sword" + pNumber);
             sword.SetActive(true);
         }
+     
         
 //        print("myvel"+" "+myVel);
         //if (Input.GetButtonDown("Fire" + pNumber)&&isGrounded)
@@ -78,8 +98,8 @@ void Start()
         //shooting
         if (Input.GetAxis("Fire" + pNumber) >= 0.5f&&canShoot)
         {
-            GameObject newBullet = Instantiate(bullet, transform.position + transform.parent.parent.transform.forward * 1f+new Vector3(0,0.1f,0),Quaternion.identity) ;
-            newBullet.GetComponent<BulletControl>().dir = transform.parent.parent.transform.forward;
+            GameObject newBullet = Instantiate(bullet, transform.position + transform.parent.transform.forward *1f+ new Vector3(0,0.5f,0),Quaternion.identity) ;
+            newBullet.GetComponent<BulletControl>().dir = transform.parent.transform.forward;
             canShoot = false;
         }
         if (!canShoot)
@@ -96,17 +116,27 @@ void Start()
 
    
 
-    private void OnTriggerEnter2(Collider collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag == "Floor")
             {
            isGrounded = true;
-            }
+            //particle1.SetActive(true);
+            //particle2.SetActive(true);
+        }
 
         if (collision.gameObject.tag == "Player")
         {
 
-            contact = true;
+
+            if (pNumber!="0" &&collision.gameObject.GetComponent<spiderControl>().pNumber != pNumber)
+            {
+                if (collision.gameObject.GetComponent<spiderControl>().mode == 0)
+                {
+                    collision.gameObject.GetComponent<spiderControl>().mode = 2;
+                }
+                
+            }
 
 
             //if (Input.GetButtonDown("Fire" + pNumber)&&canDash)
@@ -121,11 +151,13 @@ void Start()
 
     }
 
-    private void OnTriggerExit2(Collider collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "Floor")
         {
             isGrounded = false;
+            //particle1.SetActive(false);
+            //particle2.SetActive(false);
         }
         if (collision.gameObject.tag == "Player")
         {

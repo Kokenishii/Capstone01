@@ -19,7 +19,7 @@ public class JumpPlate : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player"|| other.gameObject.tag == "Body")
         {
             //other.GetComponent<Rigidbody>().AddForce(new Vector3(0,upForce,0),ForceMode.Acceleration);
             other.GetComponent<Rigidbody>().velocity = new Vector3(0, upForce, 0);

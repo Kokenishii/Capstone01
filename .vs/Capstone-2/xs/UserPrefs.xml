@@ -1,14 +1,34 @@
 ﻿<Properties StartupConfiguration="{1A1F2A53-05A3-482B-1933-6100B7C634AF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../Applications/Unity/Hub/Editor/2019.3.2f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LoadingScreen.cs">
     <Files>
-      <File FileName="../../../../../../Applications/Unity/Hub/Editor/2019.3.2f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs" Line="1" Column="1" />
+      <File FileName="Assets/spiderControl.cs" Line="145" Column="6" IsPinned="True" />
+      <File FileName="Assets/Scripts/KneeScript.cs" Line="36" Column="10" />
+      <File FileName="Assets/LegMove.cs" Line="27" Column="70" />
+      <File FileName="Assets/Scripts/Controll_Shoot.cs" Line="136" Column="81" />
+      <File FileName="Assets/Scripts/JumpPlate.cs" Line="22" Column="77" />
+      <File FileName="Assets/Archive/ragDollControl.cs" Line="29" Column="13" />
+      <File FileName="Assets/Scripts/DeadBox.cs" Line="121" Column="11" />
+      <File FileName="Assets/SpiderLeg.cs" />
+      <File FileName="Assets/Scripts/CameraPointControll.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/CameraControll.cs" Line="23" Column="41" />
+      <File FileName="Assets/IntroCam.cs" Line="17" Column="52" />
+      <File FileName="Assets/Scripts/BulletControl.cs" Line="34" Column="6" />
+      <File FileName="Assets/tinyBulletControl.cs" Line="67" Column="73" />
+      <File FileName="Assets/JointControll.cs" Line="36" Column="27" />
+      <File FileName="Assets/PuppetParent.cs" Line="9" Column="27" />
+      <File FileName="Assets/Scripts/swordControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/LoadingScreen.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="00c3b3a1-cebe-4a9e-be6c-c1eb20239e96" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2183cbab-9338-499c-b1dd-4d7a676a216f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/koken/Documents/Projects/Capstone/Capstone-2/Assets/Scripts/Controll_Shoot.cs" relfile="Assets/Scripts/Controll_Shoot.cs" line="80" column="45" />
+      <Breakpoint file="/Users/koken/Documents/Projects/Capstone/Capstone-2/Assets/Scripts/Controll_Shoot.cs" relfile="Assets/Scripts/Controll_Shoot.cs" line="80" column="45" />
+      <Breakpoint file="/Users/koken/Documents/Projects/Capstone/Capstone-2/Assets/Scripts/Controll_Shoot.cs" relfile="Assets/Scripts/Controll_Shoot.cs" line="77" column="9" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

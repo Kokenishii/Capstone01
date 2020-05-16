@@ -18,7 +18,7 @@ public class BulletControl : MonoBehaviour
     {
 
         Rigidbody rb = GetComponent<Rigidbody>();
-        rb.velocity = dir * bulletSpeed * Time.deltaTime;
+        rb.velocity = dir * bulletSpeed;
     }
 
     // Update is called once per frame
@@ -26,18 +26,19 @@ public class BulletControl : MonoBehaviour
     {
         bulletLife -= Time.deltaTime;
         if (bulletLife <= 0){
-            GameObject.Destroy(this.gameObject);
+            StartCoroutine(killSelf());
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        print(collision.gameObject.name);
         if (collision.gameObject.tag == "Body1")
         {
 
             GameObject dead = GameObject.Find("Deadbox");
             dead.GetComponent<DeadBox>().hp1 -= 5;
-            GameObject.Destroy(this.gameObject);
+            //GameObject.Destroy(this.gameObject);
             //print("hit1");
         }
         
@@ -46,9 +47,20 @@ public class BulletControl : MonoBehaviour
 
             GameObject dead = GameObject.Find("Deadbox");
             dead.GetComponent<DeadBox>().hp2 -= 5;
-            GameObject.Destroy(this.gameObject);
+           // GameObject.Destroy(this.gameObject);
            // print("hit2");
         }
+       
+
     }
 
+    IEnumerator killSelf()
+    {
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<SphereCollider>().enabled = false;
+        gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        yield return new WaitForSeconds(5);
+        GameObject.Destroy(this.gameObject);
+    }
 }

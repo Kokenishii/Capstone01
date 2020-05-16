@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: {x: -1, y: 0, z: 0.000000011924881}
-  bulletSpeed: 1400
+  bulletSpeed: 20
   bulletLife: 5
   blood: {fileID: 3440572001944387929, guid: 45a19826e8bf54ee0b61d98bea5ee953, type: 3}
   bloodDistance: 0.2
@@ -172,7 +172,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 3
+  m_Time: 0.5
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
